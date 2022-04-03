@@ -22,6 +22,26 @@ const hotelSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    petfriendly: {
+      type: Boolean,
+      required: true,
+    },
+    carparking: {
+      type: Boolean,
+      required: true,
+    },
+    wifi: {
+      type: Boolean,
+      required: true,
+    },
+    pool: {
+      type: Boolean,
+      required: true,
+    },
+    smokingarea: {
+      type: Boolean,
+      required: true,
+    },
     rating: {
       type: String,
       default: 0,

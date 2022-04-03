@@ -21,8 +21,7 @@ const hotelbookingSchema = new mongoose.Schema(
     guests: [
       {
         adult: {
-          type: mongoose.Schema.ObjectId,
-          ref: "User",
+          type: Number,
           default: 0,
         },
         children: {
@@ -31,6 +30,10 @@ const hotelbookingSchema = new mongoose.Schema(
         },
       },
     ],
+    user: {
+      type: mongoose.Schema.ObjectId,
+      ref: "User",
+    },
     createdAt: {
       type: Date,
       default: Date.now,
@@ -39,4 +42,4 @@ const hotelbookingSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Hotelbooking", hotelbookingSchema);
+module.exports = mongoose.model("HotelBooking", hotelbookingSchema);
